@@ -1,0 +1,6 @@
+@echo off
+setlocal
+vrad3 -map maps/gameroom_skybox.vmap -script lpv.vrad3 -entrypoint lpv_compute -init=lpv_init_387537447 -directfile=lpv_387537447_direct_0_0_0.dat -indirectfile=lpv_387537447_indirect_0_0_0.dat -startx=0 -starty=0 -startz=0 -endx=36 -endy=36 -endz=16 -minspp=256 -maxspp=1024 -errortol=0.010000 -threads 4 -outdir results/outputs
+vrad3 -map maps/gameroom_skybox.vmap -script lpv.vrad3 -entrypoint lpv_compute -init=lpv_init_387537447 -directfile=lpv_387537447_direct_36_0_0.dat -indirectfile=lpv_387537447_indirect_36_0_0.dat -startx=36 -starty=0 -startz=0 -endx=52 -endy=36 -endz=16 -minspp=256 -maxspp=1024 -errortol=0.010000 -threads 4 -outdir results/outputs
+vrad3 -map maps/gameroom_skybox.vmap -script lpv.vrad3 -entrypoint lpv_compute -init=lpv_init_387537447 -directfile=lpv_387537447_direct_0_36_0.dat -indirectfile=lpv_387537447_indirect_0_36_0.dat -startx=0 -starty=36 -startz=0 -endx=36 -endy=56 -endz=16 -minspp=256 -maxspp=1024 -errortol=0.010000 -threads 4 -outdir results/outputs
+vrad3 -map maps/gameroom_skybox.vmap -script lpv.vrad3 -entrypoint lpv_compute -init=lpv_init_387537447 -directfile=lpv_387537447_direct_36_36_0.dat -indirectfile=lpv_387537447_indirect_36_36_0.dat -startx=36 -starty=36 -startz=0 -endx=52 -endy=56 -endz=16 -minspp=256 -maxspp=1024 -errortol=0.010000 -threads 4 -outdir results/outputs

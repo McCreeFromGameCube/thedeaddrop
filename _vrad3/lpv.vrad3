@@ -1,0 +1,36 @@
+// maps/gameroom_skybox.vmap
+
+lpv_compute:
+    sceneinfo scene_info.dat
+    run $init
+    lpv_direct $directfile $startx $starty $startz $endx $endy $endz
+    lpv_indirect $indirectfile $startx $starty $startz $endx $endy $endz $minspp $maxspp $errortol
+    done
+
+lpv_init_387537447:
+    lpv_cells 52 56 16
+    lpv_box -192.000000 -416.000000 -40.000000 424.000000 232.000000 128.000000
+    lpv_local_to_world 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 -64.000000 -0.000000 0.000000 1.000000 0.000000
+    lpv_init
+    lpv_load_solid_voxels voxels_387537447.dat
+    done
+
+lpv_finish_all:
+    sceneinfo scene_info.dat
+    run lpv_init_387537447
+    lpv_image
+    lpv_direct_load lpv_387537447_direct_0_0_0.dat 0 0 0 36 36 16
+    lpv_indirect_load lpv_387537447_indirect_0_0_0.dat 0 0 0 36 36 16
+    lpv_direct_load lpv_387537447_direct_36_0_0.dat 36 0 0 52 36 16
+    lpv_indirect_load lpv_387537447_indirect_36_0_0.dat 36 0 0 52 36 16
+    lpv_direct_load lpv_387537447_direct_0_36_0.dat 0 36 0 36 56 16
+    lpv_indirect_load lpv_387537447_indirect_0_36_0.dat 0 36 0 36 56 16
+    lpv_direct_load lpv_387537447_direct_36_36_0.dat 36 36 0 52 56 16
+    lpv_indirect_load lpv_387537447_indirect_36_36_0.dat 36 36 0 52 56 16
+    lpv_image_ambient_occlusion
+    lpv_image_median_filter 3
+    lpv_image_resolve
+    lpv_image_write_ambientcube           lpv_387537447_ambientcube.exr
+    lpv_image_write_direct_light_indices  lpv_387537447_dli.tga  lpv_387537447_dls.tga
+    done
+
